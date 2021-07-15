@@ -8,6 +8,9 @@ package:
 source:
   url: https://github.com/xianyi/OpenBLAS/archive/v{{ version }}.tar.gz
   sha256: df2934fa33d04fd84d839ca698280df55c690c86a5a1133b3f7266fce1de279f
+  patches:
+    - patches/0001-Declare-N_THREADS-as-4-for-compatibility-of-INTERFAC.patch
+    - patches/0002-Also-make-sure-the-1-is-INTEGER-4-for-OMP_SET_NUM_TH.patch
 
 build:
   number: {{ build_number }}
